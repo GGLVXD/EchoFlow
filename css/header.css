@@ -1,18 +1,18 @@
 
 
 /* Header container */
-.header{
+.header-container{
     background-color:#1D1616;
     height: 100px;
     display: flex;
     border-bottom: 3px solid white;
     
 }
-.title{
+.title-container{
     max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
 .pfp{
     margin-top: 20px;
@@ -22,14 +22,16 @@
 
 .footer{
    text-align: center;
-   background-color: #8E1616;
+   background-color: #408A71;
    height: fit-content;
    margin-top: 10px;
 }
 
 .title-text{
     font-family: Arial, sans-serif;
+    margin-left: 60px;
     margin-top: 5%;
     color: aliceblue;
+    text-shadow: 2px 2px #fddada;
 
 }

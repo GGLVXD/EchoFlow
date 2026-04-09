@@ -31,9 +31,8 @@
     padding: 10px 20px;
 }
 .lyrics-text{
-    color: white;
-    border:3px solid white;
-    display: flex;
+color: white;
+display: flex;
 align-content: center;
 max-width: 500px;
 margin: auto auto;
@@ -41,4 +40,44 @@ margin-top: 20px;
 background-color: #1D1616;
 height: fit-content;
 }
+.category{
+    display: grid;
+  grid-template-columns: auto;
+  background-color: #1D1616;
+  padding: 10px;
+}
+.song-container{
+    width: 100%;
+    background-color: aliceblue;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  width: 750px;
+justify-self: center;
+}
 
+.image-container {
+    width: 30%;
+}
+
+.song-image {
+    float: right;
+}
+
+
+.song-text {
+    font-size: 16px;
+}
+.song-text-container {
+    width: 70%;
+}
+
+.line {
+    display: flex;
+}
+
+.lyrics-url-container{
+    border: 1px solid black;
+    font-size: 30px;
+}
