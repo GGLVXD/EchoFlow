@@ -1,5 +1,5 @@
-async function getLyrics(){
-const url = `https://echoflow.gglvxd.net/api/lyrics/?artist=${artist}&title=${title}`
+async function getLyrics(artist, title) {
+  const url = `https://echoflow.gglvxd.net/api/lyrics/?artist=${artist}&title=${title}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -7,8 +7,15 @@ const url = `https://echoflow.gglvxd.net/api/lyrics/?artist=${artist}&title=${ti
     }
 
     const result = await response.json();
-    console.log(result);
+    let parsedResult = {"lyrics": result.lyrics.replace(/\r?\n/g, "<br>")};
+    console.log(parsedResult);
+
+    setLyrics(parsedResult);
   } catch (error) {
     console.error(error.message);
   }
+}
+
+function setLyrics(result){
+    document.getElementById("lyrics").innerHTML = `${result["lyrics"]}`;
 }

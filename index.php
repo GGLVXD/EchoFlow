@@ -2,7 +2,7 @@
 include 'php/fetch.php';
 
 ?>
-
+ 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +26,7 @@ include 'php/fetch.php';
             <h1 class="title-text">EchoFlow</h1>
         </div>
         <div class="pfp">
-         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/500px-Default_pfp.svg.png" height="50" width="75">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/500px-Default_pfp.svg.png" alt="avatar" height=75px width=75px>
      </div>
     </div>
      <!-- Content container -->
@@ -34,7 +34,7 @@ include 'php/fetch.php';
         <div class="search-bar">
         <div class="input-group">
                 <input id="suggestInput" type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon">
-                <button onclick="suggestInput()" class="btn btn-outline-secondary" type="button" id="search-addon">
+                <button onclick="suggestInput()" class="btn btn-outline-secondary" type="button" id="search-addon" alt="search button">
                         <i class="fas fa-search"></i>
                 </button>
         </div>

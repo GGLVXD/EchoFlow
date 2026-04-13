@@ -112,8 +112,47 @@ color: white;
 .Artist{
     text-align: center;
     color: white;
+    position: relative;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Artist #title {
+    margin: 0;
+    line-height: 1.25;
 }
 .Video{
     text-align: left;
     justify-self: center;
 }
+
+  .Artist:after {
+    content: '';
+    display: block;
+    width: min(90%, 740px);
+    height: 2.4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    background: linear-gradient(90deg, #2e2e2e 20%, #5b5b5b 50%, #2e2e2e 80%);
+    background-size: 200% 100%;
+    animation: skeleton-animation 2000ms infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes skeleton-animation {
+    to {
+      background-position: -200% 0;
+    }
+  }
+  
+.Artist.loaded:after {
+        display: none;
+        animation: none;
+}
+  
+  

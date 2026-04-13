@@ -3,7 +3,6 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $segments = explode('/', trim($path, '/'));
 $id = $segments[1] ?? '';
 
-echo $id;
 ?>
 
 <!DOCTYPE html>
@@ -29,13 +28,12 @@ echo $id;
             <h1 class="title-text">EchoFlow</h1>
         </div>
         <div class="pfp">
-        <img src="/assets/avatar.png" height="50" width="75">
+        <img src="/assets/avatar.png" alt="avatar" height="50" width="75">
      </div>
     </div>
-    
         <div class="Artist">
-            <h1>Ella Langley Lyrics "Dandelion"</h1>
-</div>
+            <h1 id="title" style="display:none">Ella Langley Lyrics "Dandelion"</h1>
+    </div>
 <div class="Video">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/sf6eRmInk1s?si=fhtQ9mBXLZzLMKCl" 
     title="YouTube video player" 
@@ -44,60 +42,20 @@ echo $id;
 </iframe>
 </div>
 <div class="lyricstyt">
-<br>Tried leavin' where I come from, but I'm always gonna go back
-<br>I tried sipping on the champagne, but it's always gonna be Jack
-<br>There's things I can't change, like how I was raised
-<br>The Bible in my blood, and the 'Bama in my veins
-<br>Ain't a pink bouquet in the flower store
-<br>I'm okay if I'm a little more
-
-<br>Dandelion
-<br>Born to live free, riding on a breeze
-<br>On a summer night
-<br>Tucked back in the weeds, guess that's just me
-<br>In a bed of red roses, I'm the one growing up on the wilder side
-<br>So if you're tired of thorns, I'm a little more
-<br>Dandelion
-
-<br>No stranger to a dirt road or a country muddy river bank
-<br>If you're picking me, you oughta know
-<br>I wasn't made for fancy crystal vase
-<br>A mason jar and old blue jeans, from my roots to my boots, I'll always be
-
-<br>A dandelion
-<br>Born to live free, riding on a breeze
-<br>On a summer night
-<br>Tucked back in the weeds, guess that's just me
-<br>In a bed of red roses, I'm the one growing up on the wilder side
-<br>So if you're tired of thorns, I'm a little more
-<br>Dandelion
-<br>Oh, oh, oh, Dandelion
-
-<br>Been a little overlooked all my life
-<br>But if you know where to look
-<br>It sounds like you might like
-
-<br>A dandelion
-<br>Born to live free, riding on a breeze
-<br>On a summer night
-<br>Tucked back in the weeds, guess that's just me
-<br>In a bed of red roses, I'm the one growing up on the wilder side
-<br>So if you're tired of thorns, I'm a little more
-<br>Dandelion
-
-<br>Whoa, dandelion
-<br>Oh, oh, oh, dandelion
-<br>Mmm
-<br>Dandelion, uh
-<br>Been a little overlooked, yeah, all my life
-<br>Well, least I made you look maybe once or twice
-Mmm, dandelion</br>
-</p>
+<p id="lyrics"></p>
 </div>
 
 
 </body>
-<script src="/js/lyrics.js">
-    getLyrics();
+<script src="/js/lyrics.js"></script>
+<script>
+    //getLyrics();
+</script>
+<script>
+    const id = <?php echo json_encode($id); ?>;
+</script>
+<script src="/js/song.js"></script>
+<script>
+    getMusicInfo();
 </script>
 </html>
