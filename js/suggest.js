@@ -24,7 +24,7 @@ let container = document.getElementById("category-container");
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function getData() {
 let query = document.getElementById("suggestInput").value;
-  const url = "https://api.lyrics.ovh/suggest/"+query;
+  const url = "https://echoflow.gglvxd.net/api/search/?q="+query;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -32,6 +32,7 @@ let query = document.getElementById("suggestInput").value;
     }
 
     const result = await response.json();
+    console.log(result);
     sendData(result);
   } catch (error) {
     console.error(error.message);
@@ -42,7 +43,6 @@ function sendData(data){
   let query = document.getElementById("suggestInput").value;
     if(cache == 0){ // no cache
       createElements(data);
-      console.log(data);
     } else {
       nukeData()
       console.log(query)
@@ -53,7 +53,7 @@ function sendData(data){
 
 function createElements(data) {
     let container = document.getElementById("category-container");
-    for(let i = 0;i<=data.data.length;i++){
+    for(let i = 0;i<=data.response.hits.length;i++){
       let newdiv = document.createElement("div");
       cache = cache+1;
       // give id to element
@@ -62,21 +62,16 @@ function createElements(data) {
       `
             <div class="song-container">
                   <div class="song-title-container">
-                      <a target="_blank" href="https://echoflow.gglvxd.net/lyrics/${data["data"][i]["artist"]["name"]}/${data["data"][i]["title"]}">${data["data"][i]["title"]}<i class="fas fa-external-link-alt"></i></a>
+                      <a target="_blank" href="https://echoflow.gglvxd.net/lyrics/${data["response"]["hits"][i]["result"]["id"]}">${data["response"]["hits"][i]["result"]["title"]}<i class="fas fa-external-link-alt"></i></a>
                   </div>
                   <div class="line">
                       <div class="song-author-container">
                           <p class="song-author">
-                              <a href="${data["data"][i]["artist"]["link"]}">${data["data"][i]["artist"]["name"]}</a>
+                              <a href="">${data["response"]["hits"][i]["result"]["primary_artist"]["name"]}</a>
                           </p>
-                          <div class="audio-control">
-                              <audio controls>
-                                  <source src="${data["data"][i]["preview"]}" type="audio/mpeg">
-                              </audio>
-                          </div>
                       </div>
                       <div class="image-container">
-                          <img class="song-image" src="${data["data"][i]["album"]["cover"]}" width="100" height="100">
+                          <img class="song-image" src="${data["response"]["hits"][i]["result"]["song_art_image_url"]}" width="100" height="100">
                       </div>
                   </div>
               </div>
