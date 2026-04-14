@@ -17,6 +17,8 @@ $id = $segments[1] ?? '';
 
     <!-- Header css -->
     <link rel="stylesheet" href="/css/header.css">
+    <!-- footer css -->
+    <link rel="stylesheet" href="/css/footer.css">
     <!-- global things -->
     <link rel="stylesheet" href="/css/global.css">
     <!-- content css -->

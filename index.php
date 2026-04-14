@@ -14,6 +14,8 @@ include 'php/fetch.php';
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6887/6887372.png">
     <!-- Header css -->
     <link rel="stylesheet" href="css/header.css">
+    <!-- footer css -->
+    <link rel="stylesheet" href="css/footer.css">
     <!-- pats content -->
     <link rel="stylesheet" href="css/content.css">
     <!-- global things -->
