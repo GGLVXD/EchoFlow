@@ -99,19 +99,21 @@
 }
 .Tutorial{
   background-color: #1D1616;
+  padding: 28px 16px 12px;
 }
 .tutorial-txt{
-  font-family: 'Times New Roman', serif;
-  color: black;
-  width: 100%;
-  background-color: aliceblue;
-  border: 1px solid black;
-  margin-top: 10px;
-  padding-top: 10px;
-  font-size:25px;
-  text-align: center;
-  width: 500px;
-  justify-self: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #e8e8e8;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 4px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.tutorial-txt p{
+  margin: 0;
 }
 .lyricstyt{
   width: 100%;

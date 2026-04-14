@@ -27,8 +27,9 @@ $id = $segments[1] ?? '';
         <div class="title-container">
             <a href="/" class="title-text">EchoFlow</a>
         </div>
-        <div class="pfp">
-            <img src="/assets/avatar.png" alt="avatar" height="50" width="75">
+        <div class="header-nav">
+            <a href="/" class="header-btn">Search Lyrics by Song</a>
+            <a href="/findbylyrics/" class="header-btn">Search Song by Lyrics</a>
         </div>
     </div>
         <div class="Artist">

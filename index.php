@@ -21,12 +21,13 @@ include 'php/fetch.php';
 </head>
 <body>
     <!-- Header container -->
-    <div class="header-container">
+    <div class="header-container shadow p-3 mb-5 rounded">
         <div class="title-container">
             <a href="/" class="title-text">EchoFlow</a>
         </div>
-        <div class="pfp">
-         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/500px-Default_pfp.svg.png" alt="avatar" height=75px width=75px>
+        <div class="header-nav">
+            <a href="/" class="header-btn">Search Lyrics by Song</a>
+            <a href="/findbylyrics/" class="header-btn">Search Song by Lyrics</a>
         </div>
     </div>
      <!-- Content container -->
