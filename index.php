@@ -34,7 +34,7 @@ include 'php/fetch.php';
     <div class="content">
         <div class="search-bar">
             <div class="input-group">
-                    <input id="suggestInput" type="text" class="form-control" placeholder="Search song..." aria-label="Search" aria-describedby="search-addon">
+                    <input id="suggestInput" type="text" class="form-control" placeholder="Search a song..." aria-label="Search" aria-describedby="search-addon">
                     <button onclick="suggestInput()" class="btn btn-outline-secondary" type="button" id="search-addon" alt="search button">
                             Search
                     </button>

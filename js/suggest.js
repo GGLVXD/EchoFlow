@@ -24,7 +24,7 @@ let container = document.getElementById("category-container");
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function getData() {
 let query = document.getElementById("suggestInput").value;
-  const url = "https://echoflow.gglvxd.net/api/search/?q="+query;
+  const url = "/api/search/?q=" + encodeURIComponent(query);
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -62,11 +62,11 @@ function createElements(data) {
             <div class="song-container">
           <div class="song-text-container">
             <div class="song-title-container">
-              <a target="_blank" href="https://echoflow.gglvxd.net/lyrics/${data["response"]["hits"][i]["result"]["id"]}">${data["response"]["hits"][i]["result"]["title"]}<i class="fas fa-external-link-alt"></i></a>
+              <a target="_blank" href="/lyrics/${data["response"]["hits"][i]["result"]["id"]}">${data["response"]["hits"][i]["result"]["title"]}<i class="fas fa-external-link-alt"></i></a>
             </div>
                       <div class="song-author-container">
                           <p class="song-author">
-                              <a href="">${data["response"]["hits"][i]["result"]["primary_artist"]["name"]}</a>
+                              <a>${data["response"]["hits"][i]["result"]["primary_artist"]["name"]}</a>
                           </p>
                       </div>
           </div>

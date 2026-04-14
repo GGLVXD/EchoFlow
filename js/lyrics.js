@@ -1,5 +1,5 @@
 async function getLyrics(artist, title) {
-  const url = `https://echoflow.gglvxd.net/api/lyrics/?artist=${artist}&title=${title}`;
+  const url = `/api/lyrics/?artist=${encodeURIComponent(artist)}&title=${encodeURIComponent(title)}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {

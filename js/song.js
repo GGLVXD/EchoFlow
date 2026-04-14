@@ -1,5 +1,5 @@
 async function getMusicInfo(){
-const url = `https://echoflow.gglvxd.net/api/song/?id=${id}`
+const url = `/api/song/?id=${encodeURIComponent(id)}`
   try {
     const response = await fetch(url);
     if (!response.ok) {
