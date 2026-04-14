@@ -53,7 +53,7 @@ function sendData(data){
 
 function createElements(data) {
     let container = document.getElementById("category-container");
-    for(let i = 0;i<=data.response.hits.length;i++){
+  for(let i = 0;i < data.response.hits.length;i++){
       let newdiv = document.createElement("div");
       cache = cache+1;
       // give id to element
@@ -61,18 +61,18 @@ function createElements(data) {
       newdiv.innerHTML =
       `
             <div class="song-container">
-                  <div class="song-title-container">
-                      <a target="_blank" href="https://echoflow.gglvxd.net/lyrics/${data["response"]["hits"][i]["result"]["id"]}">${data["response"]["hits"][i]["result"]["title"]}<i class="fas fa-external-link-alt"></i></a>
-                  </div>
-                  <div class="line">
+          <div class="song-text-container">
+            <div class="song-title-container">
+              <a target="_blank" href="https://echoflow.gglvxd.net/lyrics/${data["response"]["hits"][i]["result"]["id"]}">${data["response"]["hits"][i]["result"]["title"]}<i class="fas fa-external-link-alt"></i></a>
+            </div>
                       <div class="song-author-container">
                           <p class="song-author">
                               <a href="">${data["response"]["hits"][i]["result"]["primary_artist"]["name"]}</a>
                           </p>
                       </div>
-                      <div class="image-container">
-                          <img class="song-image" src="${data["response"]["hits"][i]["result"]["song_art_image_url"]}" width="100" height="100">
-                      </div>
+          </div>
+          <div class="image-container">
+            <img class="song-image" src="${data["response"]["hits"][i]["result"]["song_art_image_url"]}" width="100" height="100">
                   </div>
               </div>
       `
