@@ -55,6 +55,11 @@
     width: 100%;
     margin-top: auto;
     padding-top: 3px;
+    color: #111111;
+}
+
+.footer p{
+    color: #111111;
 }
 
 .title-text{

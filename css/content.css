@@ -30,6 +30,20 @@
   border: none;
   padding: 10px 20px;
 }
+
+.search-bar .btn-outline-secondary,
+#search-addon {
+  color: #f5f5f5 !important;
+}
+
+.search-bar .btn-outline-secondary:hover,
+.search-bar .btn-outline-secondary:focus,
+.search-bar .btn-outline-secondary:active,
+#search-addon:hover,
+#search-addon:focus,
+#search-addon:active {
+  color: #ffffff !important;
+}
 .lyrics-text{
   color: white;
   display: flex;

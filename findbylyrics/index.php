@@ -9,6 +9,7 @@ $id = $segments[1] ?? '';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Search for songs by typing the lyrics you remember with EchoFlow.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Finder by Lyrics - EchoFlow</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -32,23 +33,25 @@ $id = $segments[1] ?? '';
             <a href="/findbylyrics/" class="header-btn">Search Song by Lyrics</a>
         </div>
     </div>
-    <div class="content">
-        <div class="search-bar">
-            <form id="findSongForm" class="input-group" action="/api/search/" method="get">
-                <input
-                    id="lyricsInput"
-                    name="q"
-                    type="text"
-                    class="form-control"
-                    placeholder="Type song lyrics here..."
-                    aria-label="Song lyrics"
-                    required
-                >
-                <button class="btn btn-outline-secondary" type="submit">Search</button>
-            </form>
+    <main>
+        <div class="content">
+            <div class="search-bar">
+                <form id="findSongForm" class="input-group" action="/api/search/" method="get">
+                    <input
+                        id="lyricsInput"
+                        name="q"
+                        type="text"
+                        class="form-control"
+                        placeholder="Type song lyrics here..."
+                        aria-label="Song lyrics"
+                        required
+                    >
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="category" style="display: none" id="category-container"></div>
+        <div class="category" style="display: none" id="category-container"></div>
+    </main>
     <!-- Footer container -->
 <div class="footer">
     <p>© 2026 <br> EchoFlow</p>

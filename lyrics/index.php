@@ -9,6 +9,7 @@ $id = $segments[1] ?? '';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Find lyrics for a song or search for songs using lyrics with EchoFlow.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Finder by Lyrics - EchoFlow</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -32,18 +33,20 @@ $id = $segments[1] ?? '';
             <a href="/findbylyrics/" class="header-btn">Search Song by Lyrics</a>
         </div>
     </div>
+    <main>
         <div class="Artist">
             <h1 id="title" style="display:none">Ella Langley Lyrics "Dandelion"</h1>
         </div>
-<div class="Video">
-   <iframe width="560" height="315"  
-    title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div class="lyricstyt">
-    <p id="lyrics"></p>
-</div>
+        <div class="Video">
+           <iframe width="560" height="315"  
+            title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="lyricstyt">
+            <p id="lyrics"></p>
+        </div>
+    </main>
     <!-- Footer container -->
 <div class="footer">
     <p>© 2026 <br> EchoFlow</p>
