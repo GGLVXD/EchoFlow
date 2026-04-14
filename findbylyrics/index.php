@@ -31,34 +31,30 @@ $id = $segments[1] ?? '';
             <img src="/assets/avatar.png" alt="avatar" height="50" width="75">
         </div>
     </div>
-        <div class="Artist">
-            <h1 id="title" style="display:none">Ella Langley Lyrics "Dandelion"</h1>
+    <div class="content">
+        <div class="search-bar">
+            <form id="findSongForm" class="input-group" action="/api/search/" method="get">
+                <input
+                    id="lyricsInput"
+                    name="q"
+                    type="text"
+                    class="form-control"
+                    placeholder="Type song lyrics here..."
+                    aria-label="Song lyrics"
+                    required
+                >
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
         </div>
-<div class="Video">
-   <iframe width="560" height="315"  
-    title="YouTube video player" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </iframe>
-</div>
-<div class="lyricstyt">
-    <p id="lyrics"></p>
-</div>
+    </div>
+    <div class="category" style="display: none" id="category-container"></div>
     <!-- Footer container -->
 <div class="footer">
     <p>© 2026 <br> EchoFlow</p>
 </div>
 
 </body>
-<script src="/js/lyrics.js"></script>
-<script>
-    //getLyrics();
-</script>
-<script>
-    const id = <?php echo json_encode($id); ?>;
-</script>
-<script src="/js/song.js"></script>
-<script>
-    getMusicInfo();
+<script src="/js/findsong.js">
+    
 </script>
 </html>

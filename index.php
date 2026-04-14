@@ -23,7 +23,7 @@ include 'php/fetch.php';
     <!-- Header container -->
     <div class="header-container">
         <div class="title-container">
-            <h1 href="/" class="title-text">EchoFlow</h1>
+            <a href="/" class="title-text">EchoFlow</a>
         </div>
         <div class="pfp">
          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/500px-Default_pfp.svg.png" alt="avatar" height=75px width=75px>
@@ -33,9 +33,9 @@ include 'php/fetch.php';
     <div class="content">
         <div class="search-bar">
             <div class="input-group">
-                    <input id="suggestInput" type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-addon">
+                    <input id="suggestInput" type="text" class="form-control" placeholder="Search song..." aria-label="Search" aria-describedby="search-addon">
                     <button onclick="suggestInput()" class="btn btn-outline-secondary" type="button" id="search-addon" alt="search button">
-                            <i class="fas fa-search"></i>
+                            Search
                     </button>
             </div>
         </div>
