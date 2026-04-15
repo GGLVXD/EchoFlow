@@ -1,9 +1,3 @@
-<?php
-include 'php/fetch.php';
-
-?>
- 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
