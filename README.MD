@@ -18,6 +18,12 @@ location /lyrics/ {
 }
 ```
 
+## Inatall PRedis
+for redis to work you need predis composer extension
+```bash
+composer require predis/predis:^1.1
+```
+
 ## .env configuration
 get your genius api from genius docs at https://docs.genius.com/
 
