@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../../redis.php';
 
 header("Content-Type: application/json");
 
@@ -13,6 +14,16 @@ if ($query === '') {
     http_response_code(400);
     echo json_encode(['error' => 'Please provide a search query using q parameter']);
     exit;
+}
+
+$cacheKey = 'lyricssearch:' . md5($query);
+try {
+    $cached = $redis->get($cacheKey);
+    if ($cached !== null) {
+        echo $cached;
+        exit;
+    }
+} catch (Exception $e) {
 }
 
 // https://joshtronic.com/2021/07/18/setting-an-authorization-header-when-using-file-get-contents-with-php/
@@ -38,6 +49,11 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     http_response_code(502);
     echo json_encode(['error' => 'Upstream lyrics response was not valid JSON']);
     exit;
+}
+
+try {
+    $redis->setex($cacheKey, 259200, $data);
+} catch (Exception $e) {
 }
 
 echo $data;
