@@ -3,6 +3,7 @@ require_once __DIR__ . '/../../redis.php';
 
 header("Content-Type: application/json");
 
+
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
@@ -12,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 $query = isset($_GET['q']) ? trim((string)$_GET['q']) : '';
 if ($query === '') {
     http_response_code(400);
-    echo json_encode(['error' => 'Please provide a search query using q parameter']);
+    echo json_encode(['error' => 'missing parameters: q']);
     exit;
 }
 

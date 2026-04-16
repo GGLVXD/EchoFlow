@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
 $query = isset($_GET['q']) ? trim((string)$_GET['q']) : '';
 if ($query === '') {
     http_response_code(400);
-    echo json_encode(['error' => 'Please provide a search query using q parameter']);
+    echo json_encode(['error' => 'missing parameters: q']);
     exit;
 }
 

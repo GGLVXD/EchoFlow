@@ -2,11 +2,20 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-$artist = $_GET['artist'];
-$title = $_GET['title'];
 require_once __DIR__ . '/../../redis.php';
 
 header("Content-Type: application/json");
+
+$artist = $_GET['artist'];
+$title = $_GET['title'];
+
+if ($artist === '' || $title === '') {
+	http_response_code(400);
+	echo json_encode([
+		'error' => 'missing parameters: artist and title',
+	]);
+	exit;
+}
 
 
 $cacheKey = 'lyrics:' . md5($artist . '|' . $title);

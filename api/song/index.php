@@ -7,7 +7,16 @@ require_once __DIR__ . '/../../redis.php';
 $apiKey = $env['GENIUS_KEY'];
 header("Content-Type: application/json");
 
-$id=$_GET['id'];  
+$id = isset($_GET['id']) ? trim($_GET['id']) : '';
+
+if ($id === '') {
+	http_response_code(400);
+	echo json_encode([
+		'error' => 'missing parameters: id',
+	]);
+	exit;
+}
+
 
 $cacheKey = 'song:' . $id;
 try {
