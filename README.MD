@@ -18,7 +18,7 @@ location /lyrics/ {
 }
 ```
 
-## Inatall PRedis
+## Install PRedis
 for redis to work you need predis composer extension
 ```bash
 composer require predis/predis:^1.1
