@@ -26,7 +26,7 @@ async function getLyrics(artist, title) {
 
 function setLyrics(result){
     document.getElementById("lyrics").innerHTML = `${result["lyrics"]}`;
-    const lyricsContainer = document.querySelector(".lyricstyt");
+    const lyricsContainer = document.querySelector(".lyrics-container");
     if (lyricsContainer) {
       lyricsContainer.classList.add("loaded");
     }
